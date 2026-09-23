@@ -12,3 +12,4 @@ node scripts/task/validated-commit.mjs --task EPW-033 --type chore --summary "ad
 The exact allowlist must equal the entire changed-file set. The command runs
 repository validation and `git diff --check`, then creates one local commit only.
 It does not push, merge, deploy, amend, rebase, reset, or alter Git configuration.
+Use `git log -1 --oneline` afterward to verify the resulting local commit.
