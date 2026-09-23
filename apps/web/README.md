@@ -1,8 +1,10 @@
-# Web application workspace
+# Web and backend workspace
 
-This directory is reserved for the Laravel web administration application and,
-subject to architectural review, the system's backend/API.
+This Laravel 13/Tailwind baseline is the future Market Administrator web surface
+and likely backend/API host. It contains generated framework files only; no
+ePwesto product module, API contract, authentication workflow, or migration has
+been added.
 
-The Laravel project has not been initialized. Do not add application features,
-dependencies, or framework-generated files until the initialization task and
-required version decisions are approved.
+Read [AGENTS.md](AGENTS.md) before changes. Run
+`node ../../scripts/verify/web.mjs` from the repository root for baseline
+verification. Do not start MySQL or run ePwesto migrations as part of that check.
