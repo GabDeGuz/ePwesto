@@ -139,6 +139,9 @@ LGU policies or treat an unresolved item as approved scope.
 - Use the task branch and, once approved, the task worktree conventions in
   `docs/orchestration/WORKSPACE-SAFETY.md`. Do not modify tracked files on
   `main`.
+- Multi-agent work uses the manual Lead Agent protocol in
+  `docs/orchestration/LEAD-AGENT-PROTOCOL.md`; it does not authorize autonomous
+  agents, external orchestration, automatic Git actions, or Symphony.
 
 ## Coding expectations
 

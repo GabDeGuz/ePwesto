@@ -11,3 +11,9 @@ owner, API, schema, or cross-client dependency, record a concise impact analysis
 
 This is advisory only. It must not invent product behavior, silently resolve a
 TBD, or delete ambiguous existing work.
+
+Record: task/revision; current/proposed responsibility; inputs/outputs;
+owned/consumed data; interfaces/dependencies; schema/client/security impact;
+ownership conflicts; alternatives; required documentation/tests/gates;
+recommendation (`PROCEED`, `REVISE`, or `BLOCKED PENDING DECISION`); and residual
+risks. Preserve section-scoped FCFS and explicit administrator decisions.

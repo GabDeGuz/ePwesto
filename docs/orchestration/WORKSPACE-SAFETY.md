@@ -5,6 +5,9 @@ an approved EPW task, the current non-`main` task branch, and preserved working
 tree state. Do not silently move, discard, reset, clean, amend, rebase, or
 rewrite unrelated work.
 
+Parallel work requires explicit file/module ownership; when human-approved
+worktrees exist, verify the assigned path and branch before writing.
+
 If changes or commits are found on `main`, stop and report the branch, HEAD,
 working-tree state, and affected paths. Wait for a human recovery decision.
 

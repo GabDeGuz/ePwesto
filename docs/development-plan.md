@@ -152,6 +152,8 @@ decisions resolve the documented TBDs.
 | EPW-029 | Add repeatable repository, web, mobile, and CI verification | EPW-027, EPW-028 |
 | EPW-030 | Establish manual role, QA/review, worktree, module, and UI governance | EPW-025, EPW-029 |
 | EPW-031 | Make workspace lifecycle, contracts, review evidence, and operational readiness explicit | EPW-030 |
+| EPW-032 | Establish manual Lead Agent and bounded-subagent governance contracts | EPW-031 |
+| EPW-033 | Add explicit-allowlist validated local commit workflow | EPW-032 |
 
 ## Dependency waves and parallel opportunities
 

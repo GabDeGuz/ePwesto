@@ -22,6 +22,24 @@ Documentation and guardrails
 This directory establishes manual conventions only. It does not configure,
 install, or authorize an orchestration tool.
 
+## Lead Agent workflow
+
+`Human authority -> repository rules/requirements -> active EPW plan -> Lead
+Agent -> scoped subagent work -> QA/Evidence -> independent review -> human
+approval -> merge`.
+
+The Lead follows [LEAD-AGENT-PROTOCOL.md](LEAD-AGENT-PROTOCOL.md), verifies
+readiness and ownership, and never self-approves a merge, deployment, or TBD.
+See [PROJECT-STATE.md](PROJECT-STATE.md); chat is not authoritative state.
+
+[AGENT-ROLES.md](AGENT-ROLES.md), [PROJECT-STATE.md](PROJECT-STATE.md),
+[WORKSPACE-SAFETY.md](WORKSPACE-SAFETY.md),
+[MODULE-GOVERNANCE.md](MODULE-GOVERNANCE.md),
+[UI-UX-GOVERNANCE.md](UI-UX-GOVERNANCE.md), [CODE-HYGIENE.md](CODE-HYGIENE.md),
+and [MODULE-CONTRACT-TEMPLATE.md](MODULE-CONTRACT-TEMPLATE.md) are manual
+contracts only: they create no worktrees, GitHub integration, automatic
+assignment/retry, deployment, merge, or Symphony configuration.
+
 ## Manual task convention
 
 Use one approved EPW task and one focused branch per change. Before modifying

@@ -14,6 +14,10 @@ must contain:
 5. Acceptance criteria and exact validation commands.
 6. Security, privacy, synthetic-data, rollback, and human-review considerations.
 7. Completion evidence, remaining gaps, and handoff notes.
+8. Lead Agent, selected roles, exclusive file/module ownership, risk, reviewer
+   requirements, Definition of Ready/Done, and human gate.
+9. Auto-commit eligibility, required checks, excluded paths, and the exact
+   reviewer/human gate; protected/high-risk work is never auto-commit eligible.
 
 Plans may be amended when evidence changes, but they cannot silently resolve a
 TBD or supersede requirements or reviewed decisions.
