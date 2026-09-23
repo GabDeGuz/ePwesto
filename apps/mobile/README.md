@@ -1,8 +1,9 @@
 # Mobile application workspace
 
-This directory is reserved for the React Native application primarily used by
-registered vendors and stall applicants.
+This React Native 0.87 baseline is the future mobile surface for registered
+vendors and stall applicants. It contains generated template files only; no
+ePwesto screen, account flow, API integration, or product module has been added.
 
-The React Native project has not been initialized. Do not add application
-features, dependencies, or framework-generated files until the initialization
-task and required version decisions are approved.
+Read [AGENTS.md](AGENTS.md) before changes. Run
+`node ../../scripts/verify/mobile.mjs` from the repository root for baseline
+verification. Android/iOS builds and emulator/device setup remain deferred.
