@@ -14,3 +14,8 @@ working-tree state, and affected paths. Wait for a human recovery decision.
 Future worktrees require human approval and must be isolated one task branch per
 worktree. A runtime, agent, or orchestration tool never overrides this policy or
 human approval gates.
+
+An approved QA record may trigger exactly one validated local commit on its
+matching non-main task branch. It cannot target a detached HEAD or `main`, and
+does not authorize push, PR, merge, deployment, reset, rebase, deletion, or Git
+configuration changes.

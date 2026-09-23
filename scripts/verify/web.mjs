@@ -7,10 +7,15 @@ const web = resolve(root, 'apps/web');
 const localPhp = resolve(root, '.tools/php/php.exe');
 const localComposer = resolve(root, '.tools/composer/composer.phar');
 const php = process.env.PHP_BIN || (existsSync(localPhp) ? localPhp : 'php');
-const composer = process.env.COMPOSER_BIN || (existsSync(localComposer) ? [php, localComposer] : ['composer']);
+const composerOverride = process.env.COMPOSER_BIN;
+const composer = composerOverride
+  ? (composerOverride.toLowerCase().endsWith('.phar') ? [php, composerOverride] : [composerOverride])
+  : (existsSync(localComposer) ? [php, localComposer] : ['composer']);
 const npm = process.platform === 'win32' ? 'npm.cmd' : 'npm';
 const run = (command, args) => {
-  const result = spawnSync(command, args, { cwd: web, stdio: 'inherit', shell: process.platform === 'win32' && command === npm });
+  const windowsShellCommand = process.platform === 'win32'
+    && (command === npm || command === 'composer' || /\.(?:bat|cmd)$/i.test(command));
+  const result = spawnSync(command, args, { cwd: web, stdio: 'inherit', shell: windowsShellCommand });
   if (result.status !== 0) process.exit(result.status ?? 1);
 };
 

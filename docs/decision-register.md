@@ -6,6 +6,26 @@ This register consolidates unresolved decisions discovered during initial
 workspace planning. It does not propose answers or add requirements. The linked
 requirements, architecture, and database documents provide the detailed context.
 
+## First implementation sequence: decisions requested
+
+The following are decision prompts, not approved solutions. They identify the
+smallest first-feature dependencies and options the human owner must choose
+between before implementation starts.
+
+| Decision | Options and trade-offs for human review | Blocks |
+| --- | --- | --- |
+| Roles and permissions | A small fixed role matrix is simpler to review; granular permissions permit delegation but add administration and authorization-test surface. | Authentication and every protected administrator action. |
+| Registration, identity, recovery, and account states | Administrator-provisioned accounts reduce self-service complexity; self-registration broadens access but needs verification and abuse controls; a hybrid needs both paths defined. | Authentication, applicant onboarding, and vendor access. |
+| Applicant-to-vendor conversion | An explicit administrator conversion preserves accountability; a separate vendor record with a link preserves history but adds lifecycle rules. | Vendor management and manual official-winner registration. |
+| FCFS timestamp and tie-breaks | A server-accepted immutable UTC timestamp plus deterministic secondary key is auditable; a database sequence provides deterministic ordering but needs a defined relationship to receipt time. | Applications and section-scoped waiting lists. |
+| Application lifecycle | Define whether withdrawal, rejection, expiry, appeal, and reapplication preserve, remove, or create a new queue position; each choice changes fairness, audit history, and user expectations. | Application status management and waiting-list behavior. |
+| Sections, stalls, and assignments | Decide identifiers, availability states, transfers, vacancy handling, cardinality, effective dates, and history; simpler one-active-assignment rules limit flexibility, while richer lifecycle rules require more validation. | Market/stall administration and administrator-controlled assignment. |
+| Initial schema and migration approach | Approve a logical schema before migrations, then use small reversible migrations; alternatively approve a bounded initial schema package first, accepting a larger early review surface. | All persistent feature work. |
+| Laravel web/API boundary | Server-rendered administration only is initially simpler; a versioned JSON API supports mobile integration but requires contract, versioning, error, pagination, and authorization conventions. A hybrid requires both boundaries to be explicit. | Authentication integration and mobile-connected features. |
+| Documents and verification | Choose required types, limits, storage boundary, administrator verification evidence, access, retention, and deletion rules. Stronger validation/scanning improves safety but adds service and operational dependencies. | Digital document submission and verification. |
+| Payments and receipts | Choose provider, fees, reconciliation, receipt authority/numbering, outage and refund handling, and compliance responsibility. Deferring online payment avoids premature sensitive integration. | Payment monitoring, online payments, receipts, and due-date notices. |
+| Notifications | Choose channel/provider, consent/preferences, trigger catalogue, retries, delivery evidence, and retention. More channels improve reach but increase privacy, reliability, and operational responsibility. | Announcements and automated notifications. |
+
 ## Product policy and users
 
 - Exact permissions for each user category.

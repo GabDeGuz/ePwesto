@@ -24,6 +24,9 @@ Use [validated-commit.mjs](../../scripts/task/validated-commit.mjs) only after
 the Lead confirms task eligibility: approved plan, non-main branch, exact
 task-only allowlist, passed required checks, clean diff check, protected-path and
 secret protections, complete scope/requirements/document/module/API/schema review,
-approved EPW commit message, and no protected/high-risk change. It stages only
-explicit paths and needs `--confirm`; it never pushes, merges, deploys, amends,
-rebases, resets, or changes Git configuration.
+approved EPW commit message, and no protected/high-risk change. For manual use
+it needs `--confirm`. After an independent QA/Evidence agent writes a matching
+`APPROVED` JSON record, the Lead immediately invokes the QA-approved command
+without `--confirm`, then routes the resulting local commit to Independent
+Review. It never pushes, opens a PR, merges, deploys, amends, rebases, resets,
+or changes Git configuration. QA approval is not review or human approval.

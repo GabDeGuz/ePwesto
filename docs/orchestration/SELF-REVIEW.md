@@ -14,3 +14,8 @@ Before creating a logical commit, confirm:
 - the commit is focused, imperative, and does not combine unrelated changes.
 
 This is a self-check, not independent review or human approval.
+
+For QA-approved local commits, confirm the independent QA JSON names the exact
+task, branch, changed-file allowlist, passing commands, date, implementer, and
+QA agent. Do not use it for protected/high-risk paths; it does not authorize any
+push, PR, merge, deployment, independent review, or human approval.

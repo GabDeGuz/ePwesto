@@ -33,7 +33,10 @@ or accessibility change, and Security/Privacy Review for sensitive records,
 documents, payments, notifications, authorization, secrets, or integrations.
 
 An Implementer cannot independently approve its own work. A passing command does
-not approve a TBD, merge, deployment, or sensitive decision.
+not approve a TBD, merge, deployment, or sensitive decision. An independent QA
+agent may issue the machine-readable `APPROVED` record only for an eligible
+candidate; that record triggers one local validated commit by the Lead, then
+Independent Review. It is not review, human approval, push, PR, merge, or deployment.
 
 ```text
 Human-approved task -> Lead readiness -> Planner if needed -> Implementer

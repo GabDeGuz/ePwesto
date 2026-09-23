@@ -64,3 +64,23 @@ then may a separate task evaluate an orchestration tool and its permissions.
 Before any Symphony evaluation, a successful manual task must demonstrate an
 isolated worktree, pull request, exact-head CI, independent review, QA evidence,
 human merge approval, and reconciliation. None has yet occurred for ePwesto.
+
+## Controlled two-agent pilot readiness
+
+Do not begin the first two-agent pilot until a human has approved a first
+feature and its required product decisions. The pilot requires two independent,
+low-risk tasks; a separate approved branch and worktree per task; exclusive
+file/module ownership; and no shared integration-sensitive file unless the human
+explicitly assigns an integration owner. Each task needs its own QA/Evidence and
+Independent Reviewer handoff. The human approves integration order, and the
+Lead records any conflict, cancellation, failed retry, recovery action, and
+rollback decision before reconciliation.
+
+## Evidence threshold for orchestration evaluation
+
+Do not recommend evaluating an orchestrator until ePwesto has actual evidence
+of all of the following: a successful approved feature task, isolated worktree
+use, a pull request, exact-head hosted CI, QA evidence, independent review,
+human merge approval, a successful controlled two-agent pilot, and documented
+conflict/recovery handling. Documentation-only exercises can validate the manual
+process wording, but cannot satisfy these feature-delivery prerequisites.

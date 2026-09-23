@@ -1,8 +1,13 @@
 # Continuous integration workflows
 
-`repository-hygiene.yml` runs only the dependency-free repository check described
-in `docs/TESTING.md`. It has read-only repository permissions and does not run
-Laravel, React Native, npm, Composer, MySQL, migrations, builds, or deployments.
+`repository-hygiene.yml` has repository read-only permissions and runs three
+non-deployment jobs: the dependency-free repository check, the Laravel web
+baseline verification, and the React Native mobile baseline verification. The
+web and mobile jobs install locked dependencies, then invoke the same
+repository-relative verification scripts documented in `docs/TESTING.md`.
 
-Application CI remains deferred until each application is deliberately
-initialized and its commands are approved and validated.
+The workflow does not start MySQL, run ePwesto migrations, require
+user-provided or repository-configured secrets, deploy, publish, or configure
+external services. Checkout does not persist its read-scoped credentials. CI
+execution on an exact pull-request head remains required evidence before a
+future change is considered ready for human merge approval.

@@ -142,6 +142,10 @@ LGU policies or treat an unresolved item as approved scope.
 - Multi-agent work uses the manual Lead Agent protocol in
   `docs/orchestration/LEAD-AGENT-PROTOCOL.md`; it does not authorize autonomous
   agents, external orchestration, automatic Git actions, or Symphony.
+- A matching independent QA/Evidence `APPROVED` record may trigger one validated
+  local commit through `scripts/task/validated-commit.mjs`; it never authorizes
+  protected/high-risk changes, independent review, human approval, push, PR,
+  merge, deployment, or Git configuration changes.
 
 ## Coding expectations
 
