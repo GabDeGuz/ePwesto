@@ -1,14 +1,9 @@
-# Future orchestration area
-
-This project-local directory is reserved for future, reviewed orchestration
-artifacts such as:
-
-- Task definitions keyed by the EPW task IDs
-- Dependency information
-- Workspace configuration
-- Orchestration configuration
+# Reserved orchestration configuration area
 
 No orchestrator or Symphony installation/configuration has been added. Do not
-create a custom orchestration system here without approval. The repository's
-requirements, architecture, database, and development-plan documents remain the
-source of truth.
+create a custom orchestration system here without a separately approved task.
+
+Manual coordination policy and readiness evidence live in
+[`docs/orchestration/`](../docs/orchestration/README.md). The repository's
+requirements, decision register, reviewed decisions, and development plan remain
+authoritative if future orchestration metadata disagrees.

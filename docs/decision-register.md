@@ -65,7 +65,8 @@ requirements, architecture, and database documents provide the detailed context.
 
 ## Architecture and operations
 
-- Laravel, PHP, Node.js, React Native, and MySQL versions and local toolchain.
+- MySQL version and production/local database provisioning; Laravel/PHP and
+  React Native/Node development baselines are recorded in ADR-0001.
 - Whether the Laravel web UI and mobile backend/API form one deployable unit.
 - API style, versioning, contract documentation, pagination, and error format.
 - Authentication/session-token mechanism and server authorization model.
@@ -84,5 +85,6 @@ requirements, architecture, and database documents provide the detailed context.
 ## Review outcome
 
 As decisions are approved, update this register and the affected source document
-in the same change. Record material architectural decisions in a reviewed format
-chosen during EPW-002; do not resolve items solely in orchestration metadata.
+in the same change. Record material architectural decisions using the reviewed
+format in [docs/decisions/README.md](decisions/README.md); do not resolve items
+solely in orchestration metadata.

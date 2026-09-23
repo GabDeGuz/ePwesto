@@ -2,9 +2,11 @@
 
 ## Status
 
-This is a provisional component view only. It does not finalize deployment,
-framework versions, API style, authentication, or infrastructure. Those choices
-require human review before implementation.
+The Laravel 13/PHP 8.3+ and React Native 0.87.1/Node 22.11+ development
+baselines are accepted in [ADR-0001](../decisions/0001-technical-foundation.md).
+This remains provisional for deployment, API style, authentication, storage,
+payments, and infrastructure; those choices require human review before
+implementation.
 
 ## Components
 

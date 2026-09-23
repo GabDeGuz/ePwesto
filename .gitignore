@@ -1,0 +1,22 @@
+# Local environment and secrets. Commit documented placeholders only.
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Ignored workspace-local tooling used only when the host lacks an approved tool.
+.tools/
+
+# Dependency, framework, coverage, and build outputs.
+node_modules/
+vendor/
+.expo/
+coverage/
+dist/
+build/
+public/build/
+
+# Local verification artifacts are never source-controlled.
+artifacts/*
+!artifacts/.gitignore
+!artifacts/README.md

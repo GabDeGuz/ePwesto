@@ -145,25 +145,33 @@ decisions resolve the documented TBDs.
 | EPW-022 | Implement administrator dashboard and approved reports | EPW-009, EPW-010, EPW-011, EPW-013, EPW-014, EPW-016, EPW-017, EPW-019, EPW-021 |
 | EPW-023 | Perform integrated security, privacy, accessibility, performance, backup/restore, and acceptance validation | EPW-008, EPW-011, EPW-012, EPW-014, EPW-016, EPW-017, EPW-019, EPW-020, EPW-022 |
 | EPW-024 | Prepare reviewed deployment and operational runbooks | EPW-002, EPW-008, EPW-023 |
+| EPW-025 | Establish planning-stage workspace guardrails, task plans, repository hygiene validation, and manual coordination conventions | None |
+| EPW-026 | Record approved technical baseline and cross-cutting contracts for workspace initialization | EPW-025 |
+| EPW-027 | Initialize Laravel/Tailwind web/backend baseline | EPW-026 |
+| EPW-028 | Initialize React Native mobile baseline | EPW-026 |
+| EPW-029 | Add repeatable repository, web, mobile, and CI verification | EPW-027, EPW-028 |
+| EPW-030 | Establish manual role, QA/review, worktree, module, and UI governance | EPW-025, EPW-029 |
+| EPW-031 | Make workspace lifecycle, contracts, review evidence, and operational readiness explicit | EPW-030 |
 
 ## Dependency waves and parallel opportunities
 
 The following are possible planning/implementation waves, not commitments to a
 delivery schedule:
 
-1. **Wave 1:** EPW-001.
-2. **Wave 2 (parallel):** EPW-002 and EPW-003 after EPW-001.
-3. **Wave 3 (partly parallel):** EPW-004, EPW-005, and EPW-021 after EPW-003;
+1. **Wave 0:** EPW-025 establishes safe planning-stage harness conventions; it does not unblock framework initialization or resolve product decisions.
+2. **Wave 1:** EPW-001.
+3. **Wave 2 (parallel):** EPW-002 and EPW-003 after EPW-001.
+4. **Wave 3 (partly parallel):** EPW-004, EPW-005, and EPW-021 after EPW-003;
    EPW-006 and EPW-007 after EPW-002; EPW-015 and EPW-018 after their decision
    prerequisites.
-4. **Wave 4 (partly parallel):** EPW-008 after both workspace initializations;
+5. **Wave 4 (partly parallel):** EPW-008 after both workspace initializations;
    EPW-009 after schema/foundation work.
-5. **Wave 5 (parallel where dependencies permit):** EPW-010, EPW-012, EPW-013,
+6. **Wave 5 (parallel where dependencies permit):** EPW-010, EPW-012, EPW-013,
    and EPW-019. EPW-011 follows section/stall administration; EPW-017 follows its
    stall/vendor prerequisites.
-6. **Wave 6:** EPW-014 follows applications and vendors; EPW-016 follows payment
+7. **Wave 6:** EPW-014 follows applications and vendors; EPW-016 follows payment
    design and assignment; EPW-020 joins payments with the notification foundation.
-7. **Wave 7:** EPW-022 after its data-producing modules; EPW-023 after all
+8. **Wave 7:** EPW-022 after its data-producing modules; EPW-023 after all
    in-scope module integrations; EPW-024 after acceptance validation.
 
 Parallel work must coordinate shared API contracts, schema changes, and

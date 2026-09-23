@@ -72,10 +72,15 @@ ePwesto/
 |   |-- architecture/        # Provisional boundaries and open decisions
 |   |-- database/            # Candidate entities and relationships
 |   |-- diagrams/            # Reserved for reviewed diagrams
+|   |-- decisions/           # Future reviewed architecture decision records
+|   |-- plans/               # Bounded EPW task plans
+|   |-- orchestration/       # Manual coordination and workspace safeguards
 |   |-- decision-register.md # Consolidated human decisions still required
 |   `-- development-plan.md  # Modules, proposed tasks, and dependencies
+|-- scripts/verify/          # Dependency-free repository hygiene validation
+|-- artifacts/               # Ignored local verification evidence
 |-- .github/
-|   `-- workflows/           # Reserved for future CI workflows
+|   `-- workflows/           # Repository hygiene CI only at this stage
 |-- .orchestrator/           # Reserved for future orchestration metadata
 |-- AGENTS.md                # Instructions for human and AI contributors
 `-- README.md
@@ -88,11 +93,28 @@ ePwesto/
 - [Initial database plan](docs/database/README.md)
 - [Development plan](docs/development-plan.md)
 - [Human decision register](docs/decision-register.md)
+- [Workspace guardrails](docs/GUARDRAILS.md)
+- [Security and privacy policy](docs/SECURITY-PRIVACY.md)
+- [Synthetic data policy](docs/SYNTHETIC-DATA.md)
+- [Testing and validation strategy](docs/TESTING.md)
+- [Bounded task plans](docs/plans/README.md)
+- [Decision-record approach](docs/decisions/README.md)
+- [Manual orchestration governance](docs/orchestration/README.md)
+- [Technical foundation decision](docs/decisions/0001-technical-foundation.md)
+- [API boundary](docs/API.md)
+- [Role and permission boundary](docs/ROLES-PERMISSIONS.md)
+- [Document upload boundary](docs/DOCUMENT-UPLOADS.md)
+- [Payment boundary](docs/PAYMENTS.md)
+- [Development environment guide](docs/DEVELOPMENT-ENVIRONMENT.md)
+- [Deployment and staging checklist](docs/DEPLOYMENT-STAGING-CHECKLIST.md)
+- [Module contracts](docs/modules/README.md)
+- [UI/UX workflow](docs/UI-UX-WORKFLOW.md)
 - [Agent and contributor instructions](AGENTS.md)
 
 ## Current status
 
-**Workspace preparation / requirements planning.** No Laravel or React Native
-project has been initialized, no dependencies have been added, and no production
-schema or application features have been implemented. The next step is human
-review of the documented scope, open decisions, and proposed task breakdown.
+**Development workspace foundation.** Laravel 13/Tailwind and React Native 0.87
+baselines are initialized with lockfiles and repeatable validation. No ePwesto
+product module, production schema, MySQL service, data migration, payment
+integration, or authentication design has been implemented. Run
+`node scripts/verify/all.mjs` for the combined baseline checks.

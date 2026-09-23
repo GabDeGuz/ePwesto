@@ -1,6 +1,8 @@
-# Future CI workflows
+# Continuous integration workflows
 
-This directory is reserved for GitHub Actions workflows after the Laravel and
-React Native workspaces and their validated commands exist. No placeholder
-workflow is enabled because there are not yet any application builds or tests to
-run.
+`repository-hygiene.yml` runs only the dependency-free repository check described
+in `docs/TESTING.md`. It has read-only repository permissions and does not run
+Laravel, React Native, npm, Composer, MySQL, migrations, builds, or deployments.
+
+Application CI remains deferred until each application is deliberately
+initialized and its commands are approved and validated.
